@@ -10,7 +10,7 @@ function update_dnf() {
         if [ $? -eq 0 ]; then
             echo "dnf update completed successfully."
             rm -f /opt/rocky-leapp-upgrade-started
-            break
+            reboot
         else
             echo "dnf update failed. Retrying..."
             sleep 5
